@@ -1,0 +1,151 @@
+{
+  "dawn": {
+    "ending": "dawn",
+    "meters": {
+      "memory": 9,
+      "warmth": 9,
+      "truth": 8
+    },
+    "items": [
+      "recipe",
+      "photo",
+      "ticket",
+      "thermos",
+      "cup"
+    ],
+    "log": [
+      "prologue2 :: Put the kettle on first. The night will want something warm.",
+      "c1_arrive :: “You came because it's the last night. Say it plainly.”",
+      "c1_drink :: Kopi tubruk — strong, black, no hiding in it.",
+      "c1_shelf :: Show him Ibu's recipe card, kept behind the jars.",
+      "c2_arrive :: “Tell me about her — the her from before I was born.”",
+      "c2_drink :: Cokelat panas — sweet, like the first day of school.",
+      "c2_shelf :: Open the envelope — a photograph, kept for a year.",
+      "c3_arrive :: “Stay a while. Goodbyes can wait for one more cup.”",
+      "c3_drink :: Teh jahe — something warm to carry with him.",
+      "c3_shelf :: Open the drawer — the two bus tickets are still there.",
+      "c4_arrive :: “Come in out of the rain first. The story can wait.”",
+      "c4_drink :: Teh jahe — warm, gentle, for someone who had been out in the rain.",
+      "c4_shelf :: Accept the thermos, and set it on the shelf with the others.",
+      "c5_shelf :: Take down the chipped cup, and hold it in the dawn light.",
+      "c5_brew :: Kopi tubruk — to face the morning clearly.",
+      "c5_decision :: Close the shutters gently, and carry the night with you."
+    ]
+  },
+  "open": {
+    "ending": "open",
+    "meters": {
+      "memory": 5,
+      "warmth": 21,
+      "truth": 2
+    },
+    "items": [
+      "cup"
+    ],
+    "log": [
+      "prologue2 :: Put the kettle on first. The night will want something warm.",
+      "c1_arrive :: “You're soaked. Sit. The rain can wait outside.”",
+      "c1_drink :: Teh jahe — ginger tea, warm all the way down.",
+      "c1_shelf :: Ask him about his life — really ask.",
+      "c2_arrive :: “I'm glad you came. The night needed you in it.”",
+      "c2_drink :: Teh jahe — for her joints, and the long walk home.",
+      "c2_shelf :: Ask what Ibu was like as her student.",
+      "c3_arrive :: “Stay a while. Goodbyes can wait for one more cup.”",
+      "c3_drink :: Teh jahe — something warm to carry with him.",
+      "c3_shelf :: Promise to visit him, and mean it this time.",
+      "c4_arrive :: “Come in out of the rain first. The story can wait.”",
+      "c4_drink :: Teh jahe — warm, gentle, for someone who had been out in the rain.",
+      "c4_shelf :: Ask her who she really is — and why tonight.",
+      "c5_shelf :: Take down the chipped cup, and hold it in the dawn light.",
+      "c5_brew :: Cokelat panas — to remember, properly, before moving on.",
+      "c5_decision :: Close the shutters gently, and carry the night with you."
+    ]
+  },
+  "letter": {
+    "ending": "letter",
+    "meters": {
+      "memory": 0,
+      "warmth": 0,
+      "truth": 31
+    },
+    "items": [],
+    "log": [
+      "prologue2 :: Stand in the doorway and look at the street a moment.",
+      "c1_arrive :: “You came because it's the last night. Say it plainly.”",
+      "c1_drink :: Kopi tubruk — strong, black, no hiding in it.",
+      "c1_shelf :: Tell him the stall closes for good at dawn.",
+      "c2_arrive :: “Tell me about her — the her from before I was born.”",
+      "c2_drink :: Kopi tubruk — the way she takes it when marking papers.",
+      "c2_shelf :: Admit you never read the letters Ibu left behind.",
+      "c3_arrive :: “Then say it wrong. Wrong is still honest.”",
+      "c3_drink :: Kopi tubruk — strong enough for a long journey.",
+      "c3_shelf :: Tell him the truth about why you stayed all these years.",
+      "c4_arrive :: “How do you know this place? Tell me everything.”",
+      "c4_drink :: Kopi tubruk — she believed in facing the night head-on.",
+      "c4_shelf :: Ask her who she really is — and why tonight.",
+      "c5_shelf :: Open the box, and read the first letter at last.",
+      "c5_brew :: Kopi tubruk — to face the morning clearly.",
+      "c5_decision :: Write the letter — the honest one, the one that has waited a year."
+    ]
+  },
+  "cup": {
+    "ending": "cup",
+    "meters": {
+      "memory": 18,
+      "warmth": 0,
+      "truth": 0
+    },
+    "items": [
+      "recipe",
+      "photo",
+      "ticket",
+      "thermos",
+      "cup"
+    ],
+    "log": [
+      "prologue2 :: Light the lamps one by one, slowly.",
+      "c1_arrive :: Say nothing. Let the kettle fill the silence.",
+      "c1_drink :: Cokelat panas — the way Ibu made it when you were small.",
+      "c1_shelf :: Show him Ibu's recipe card, kept behind the jars.",
+      "c2_arrive :: Nod, and busy yourself with the cups.",
+      "c2_drink :: Cokelat panas — sweet, like the first day of school.",
+      "c2_shelf :: Open the envelope — a photograph, kept for a year.",
+      "c3_arrive :: Joke it away: “The universe also gave you that jacket.”",
+      "c3_drink :: Cokelat panas — the thunderstorm drink, for old times.",
+      "c3_shelf :: Open the drawer — the two bus tickets are still there.",
+      "c4_arrive :: Keep your distance. Strangers at 3 a.m. are rarely simple.",
+      "c4_drink :: Cokelat panas — the drink for storms, and for the frightened.",
+      "c4_shelf :: Accept the thermos, and set it on the shelf with the others.",
+      "c5_shelf :: Take down the chipped cup, and hold it in the dawn light.",
+      "c5_brew :: Cokelat panas — to remember, properly, before moving on.",
+      "c5_decision :: Close the shutters gently, and carry the night with you."
+    ]
+  },
+  "chair": {
+    "ending": "chair",
+    "meters": {
+      "memory": 0,
+      "warmth": 18,
+      "truth": 2
+    },
+    "items": [],
+    "log": [
+      "prologue2 :: Put the kettle on first. The night will want something warm.",
+      "c1_arrive :: Say nothing. Let the kettle fill the silence.",
+      "c1_drink :: Teh jahe — ginger tea, warm all the way down.",
+      "c1_shelf :: Ask him about his life — really ask.",
+      "c2_arrive :: Nod, and busy yourself with the cups.",
+      "c2_drink :: Teh jahe — for her joints, and the long walk home.",
+      "c2_shelf :: Ask what Ibu was like as her student.",
+      "c3_arrive :: Joke it away: “The universe also gave you that jacket.”",
+      "c3_drink :: Teh jahe — something warm to carry with him.",
+      "c3_shelf :: Promise to visit him, and mean it this time.",
+      "c4_arrive :: Keep your distance. Strangers at 3 a.m. are rarely simple.",
+      "c4_drink :: Teh jahe — warm, gentle, for someone who had been out in the rain.",
+      "c4_shelf :: Ask her who she really is — and why tonight.",
+      "c5_shelf :: Sit in the quiet, and let the morning arrive on its own.",
+      "c5_brew :: Teh jahe — to carry warmth into whatever comes next.",
+      "c5_decision :: Leave the lamp on. Let the light decide what it is for."
+    ]
+  }
+}

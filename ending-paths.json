@@ -1,0 +1,163 @@
+{
+  "letter": {
+    "path": [
+      "prologue2 :: Light the lamps one by one, slowly.",
+      "c1_arrive :: “You came because it's the last night. Say it plainly.”",
+      "c1_drink :: Kopi tubruk — strong, black, no hiding in it.",
+      "c1_shelf :: Show him Ibu's recipe card, kept behind the jars.",
+      "c2_arrive :: “Tell me about her — the her from before I was born.”",
+      "c2_drink :: Kopi tubruk — the way she takes it when marking papers.",
+      "c2_shelf :: Open the envelope — a photograph, kept for a year.",
+      "c3_arrive :: “Then say it wrong. Wrong is still honest.”",
+      "c3_drink :: Kopi tubruk — strong enough for a long journey.",
+      "c3_shelf :: Open the drawer — the two bus tickets are still there.",
+      "c4_arrive :: “How do you know this place? Tell me everything.”",
+      "c4_drink :: Kopi tubruk — she believed in facing the night head-on.",
+      "c4_shelf :: Accept the thermos, and set it on the shelf with the others.",
+      "c5_shelf :: Take down the chipped cup, and hold it in the dawn light.",
+      "c5_brew :: Kopi tubruk — to face the morning clearly.",
+      "c5_decision :: Leave the lamp on. Let the light decide what it is for."
+    ],
+    "meters": {
+      "memory": 6,
+      "warmth": 2,
+      "truth": 12
+    },
+    "items": [
+      "recipe",
+      "photo",
+      "ticket",
+      "thermos",
+      "cup"
+    ],
+    "endNode": "end_letter_1"
+  },
+  "open": {
+    "path": [
+      "prologue2 :: Light the lamps one by one, slowly.",
+      "c1_arrive :: “You came because it's the last night. Say it plainly.”",
+      "c1_drink :: Kopi tubruk — strong, black, no hiding in it.",
+      "c1_shelf :: Show him Ibu's recipe card, kept behind the jars.",
+      "c2_arrive :: “Tell me about her — the her from before I was born.”",
+      "c2_drink :: Kopi tubruk — the way she takes it when marking papers.",
+      "c2_shelf :: Open the envelope — a photograph, kept for a year.",
+      "c3_arrive :: “Then say it wrong. Wrong is still honest.”",
+      "c3_drink :: Kopi tubruk — strong enough for a long journey.",
+      "c3_shelf :: Open the drawer — the two bus tickets are still there.",
+      "c4_arrive :: “How do you know this place? Tell me everything.”",
+      "c4_drink :: Kopi tubruk — she believed in facing the night head-on.",
+      "c4_shelf :: Offer her Ibu's recipe card, so the recipe travels onward.",
+      "c5_shelf :: Take down the chipped cup, and hold it in the dawn light.",
+      "c5_brew :: Teh jahe — to carry warmth into whatever comes next.",
+      "c5_decision :: Leave the lamp on. Let the light decide what it is for."
+    ],
+    "meters": {
+      "memory": 5,
+      "warmth": 6,
+      "truth": 12
+    },
+    "items": [
+      "recipe",
+      "photo",
+      "ticket",
+      "cup"
+    ],
+    "endNode": "end_open_1"
+  },
+  "dawn": {
+    "path": [
+      "prologue2 :: Light the lamps one by one, slowly.",
+      "c1_arrive :: “You came because it's the last night. Say it plainly.”",
+      "c1_drink :: Kopi tubruk — strong, black, no hiding in it.",
+      "c1_shelf :: Show him Ibu's recipe card, kept behind the jars.",
+      "c2_arrive :: “Tell me about her — the her from before I was born.”",
+      "c2_drink :: Kopi tubruk — the way she takes it when marking papers.",
+      "c2_shelf :: Open the envelope — a photograph, kept for a year.",
+      "c3_arrive :: “Then say it wrong. Wrong is still honest.”",
+      "c3_drink :: Kopi tubruk — strong enough for a long journey.",
+      "c3_shelf :: Open the drawer — the two bus tickets are still there.",
+      "c4_arrive :: “How do you know this place? Tell me everything.”",
+      "c4_drink :: Teh jahe — warm, gentle, for someone who had been out in the rain.",
+      "c4_shelf :: Accept the thermos, and set it on the shelf with the others.",
+      "c5_shelf :: Take down the chipped cup, and hold it in the dawn light.",
+      "c5_brew :: Teh jahe — to carry warmth into whatever comes next.",
+      "c5_decision :: Leave the lamp on. Let the light decide what it is for."
+    ],
+    "meters": {
+      "memory": 6,
+      "warmth": 6,
+      "truth": 12
+    },
+    "items": [
+      "recipe",
+      "photo",
+      "ticket",
+      "thermos",
+      "cup"
+    ],
+    "endNode": "end_dawn_1"
+  },
+  "chair": {
+    "path": [
+      "prologue2 :: Light the lamps one by one, slowly.",
+      "c1_arrive :: “You came because it's the last night. Say it plainly.”",
+      "c1_drink :: Kopi tubruk — strong, black, no hiding in it.",
+      "c1_shelf :: Show him Ibu's recipe card, kept behind the jars.",
+      "c2_arrive :: “Tell me about her — the her from before I was born.”",
+      "c2_drink :: Kopi tubruk — the way she takes it when marking papers.",
+      "c2_shelf :: Open the envelope — a photograph, kept for a year.",
+      "c3_arrive :: “Then say it wrong. Wrong is still honest.”",
+      "c3_drink :: Kopi tubruk — strong enough for a long journey.",
+      "c3_shelf :: Promise to visit him, and mean it this time.",
+      "c4_arrive :: “How do you know this place? Tell me everything.”",
+      "c4_drink :: Kopi tubruk — she believed in facing the night head-on.",
+      "c4_shelf :: Ask her who she really is — and why tonight.",
+      "c5_shelf :: Open the box, and read the first letter at last.",
+      "c5_brew :: Teh jahe — to carry warmth into whatever comes next.",
+      "c5_decision :: Leave the lamp on. Let the light decide what it is for."
+    ],
+    "meters": {
+      "memory": 3,
+      "warmth": 6,
+      "truth": 12
+    },
+    "items": [
+      "recipe",
+      "photo"
+    ],
+    "endNode": "end_chair_1"
+  },
+  "cup": {
+    "path": [
+      "prologue2 :: Light the lamps one by one, slowly.",
+      "c1_arrive :: “You came because it's the last night. Say it plainly.”",
+      "c1_drink :: Kopi tubruk — strong, black, no hiding in it.",
+      "c1_shelf :: Show him Ibu's recipe card, kept behind the jars.",
+      "c2_arrive :: “I'm glad you came. The night needed you in it.”",
+      "c2_drink :: Teh jahe — for her joints, and the long walk home.",
+      "c2_shelf :: Open the envelope — a photograph, kept for a year.",
+      "c3_arrive :: Joke it away: “The universe also gave you that jacket.”",
+      "c3_drink :: Cokelat panas — the thunderstorm drink, for old times.",
+      "c3_shelf :: Open the drawer — the two bus tickets are still there.",
+      "c4_arrive :: Keep your distance. Strangers at 3 a.m. are rarely simple.",
+      "c4_drink :: Cokelat panas — the drink for storms, and for the frightened.",
+      "c4_shelf :: Accept the thermos, and set it on the shelf with the others.",
+      "c5_shelf :: Take down the chipped cup, and hold it in the dawn light.",
+      "c5_brew :: Cokelat panas — to remember, properly, before moving on.",
+      "c5_decision :: Close the shutters gently, and carry the night with you."
+    ],
+    "meters": {
+      "memory": 12,
+      "warmth": 4,
+      "truth": 4
+    },
+    "items": [
+      "recipe",
+      "photo",
+      "ticket",
+      "thermos",
+      "cup"
+    ],
+    "endNode": "end_cup_1"
+  }
+}

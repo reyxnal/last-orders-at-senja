@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Last Orders at Senja — an interactive narrative about one last night at a fictional Jakarta street coffee stall. Five chapters, five visitors, five endings.">
+<meta property="og:title" content="Last Orders at Senja">
+<meta property="og:description" content="One last night at a Jakarta street coffee stall. Five visitors. Five endings.">
+<meta property="og:image" content="assets/hero-thumbnail.jpg">
+<title>Last Orders at Senja — An Interactive Narrative</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======================= TITLE ======================= -->
+<section id="screen-title" class="screen active" aria-label="Title screen">
+  <img class="title-bg" src="assets/hero-thumbnail.jpg" alt="" aria-hidden="true">
+  <div class="title-veil" aria-hidden="true"></div>
+  <div class="title-card">
+    <h1>Last Orders <span>at Senja</span></h1>
+    <p class="tagline">One last night at a street coffee stall in Jakarta.<br>Five visitors. Five cups. Five endings.</p>
+    <p class="content-note">Content note: this story deals with themes of grief and loss. There are no jump scares, no flashing images, and no time pressure — take as long as you like.</p>
+    <div class="title-actions">
+      <button id="btn-start" class="btn primary">Begin the Night</button>
+      <button id="btn-continue" class="btn" style="display:none">Continue — Return to the Stall</button>
+      <button id="btn-chapters" class="btn" disabled>Chapter Select</button>
+      <button id="btn-gallery-title" class="btn">Ending Gallery</button>
+      <button id="btn-settings-title" class="btn">Settings</button>
+      <button id="btn-credits-title" class="btn">Credits &amp; AI Disclosure</button>
+    </div>
+    <p class="title-foot"><span id="endings-progress">Endings found: 0 / 5</span> · An original interactive narrative · English · No account, no data collected.</p>
+    <p id="title-error">The story could not be loaded. Please make sure story.js sits next to this file and try again.</p>
+  </div>
+</section>
+
+<!-- ======================= GAME ======================= -->
+<section id="screen-game" class="screen" aria-label="Story">
+  <header class="hud">
+    <div class="hud-row">
+      <span id="chapter-label">Prologue</span>
+      <span id="chapter-dots" aria-label="Chapter progress">
+        <span class="cdot"></span><span class="cdot"></span><span class="cdot"></span><span class="cdot"></span><span class="cdot"></span>
+      </span>
+      <span class="spacer"></span>
+      <button id="hud-shelf" class="btn small">Shelf &amp; Journal (<span id="shelf-count">0 / 5</span>)</button>
+      <button id="hud-mute" class="btn small">Sound: On</button>
+      <button id="hud-settings" class="btn small">Settings</button>
+      <button id="hud-title" class="btn small">Title</button>
+    </div>
+    <div class="hud-row meters-row">
+      <span class="meters-hint">How the night is shaping you:</span>
+      <div class="meters" aria-label="Feelings of the night">
+        <span class="meter-row" id="meter-memory"><span class="m-label">Memory</span><span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+        <span class="meter-row" id="meter-warmth"><span class="m-label">Warmth</span><span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+        <span class="meter-row" id="meter-truth"><span class="m-label">Truth</span><span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="scene">
+    <img id="scene-bg" src="assets/bg-warung-night.jpg" alt="The coffee stall at night in the rain">
+    <div class="scene-veil" aria-hidden="true"></div>
+    <div id="ending-banner" role="status"></div>
+    <div id="portrait-wrap" class="hidden"><img id="portrait-img" src="" alt=""></div>
+  </div>
+
+  <div class="story-panel">
+    <div class="story-inner" id="story-box">
+      <span id="speaker" style="display:none"></span>
+      <div id="story-text" aria-live="polite"></div>
+      <div id="choices" role="group" aria-label="Choices"></div>
+      <div id="continue-wrap"></div>
+    </div>
+  </div>
+</section>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<!-- ======================= MODALS ======================= -->
+<div id="modal-shelf" class="modal" role="dialog" aria-modal="true" aria-labelledby="shelf-title" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head"><h2 id="shelf-title">Memory Shelf &amp; Journal</h2><button class="btn small modal-close" data-close="modal-shelf">Close ×</button></div>
+    <p class="muted">Keepsakes from the night. Some open extra moments in the story — a shelf that is full changes how the dawn arrives.</p>
+    <h3>Memory Shelf</h3>
+    <div id="shelf-items"></div>
+    <h3>Journal</h3>
+    <div id="journal-entries"></div>
+  </div>
+</div>
+
+<div id="modal-gallery" class="modal" role="dialog" aria-modal="true" aria-labelledby="gallery-title" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head"><h2 id="gallery-title">Ending Gallery</h2><button class="btn small modal-close" data-close="modal-gallery">Close ×</button></div>
+    <p class="muted">Five dawns wait at the end of this night. Your choices — what you brew, what you say, what you keep — decide which one arrives.</p>
+    <div id="gallery-items"></div>
+  </div>
+</div>
+
+<div id="modal-chapters" class="modal" role="dialog" aria-modal="true" aria-labelledby="chapters-title" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head"><h2 id="chapters-title">Chapter Select</h2><button class="btn small modal-close" data-close="modal-chapters">Close ×</button></div>
+    <p class="muted">Revisit any hour of the night. You return with a balanced heart and the keepsakes of earlier hours. The truest ending is earned on a full night, from the prologue to the dawn.</p>
+    <div id="chapter-list"></div>
+  </div>
+</div>
+
+<div id="modal-settings" class="modal" role="dialog" aria-modal="true" aria-labelledby="settings-title" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head"><h2 id="settings-title">Settings</h2><button class="btn small modal-close" data-close="modal-settings">Close ×</button></div>
+    <div class="setting-row"><span class="lbl">Sound</span><button id="setting-mute" class="btn">Sound: On</button><span class="muted">Original procedural music &amp; rain, made live in your browser. No audio files.</span></div>
+    <div class="setting-row"><span class="lbl">Text speed</span>
+      <button class="btn" data-speed="slow" aria-pressed="false">Slow</button>
+      <button class="btn" data-speed="normal" aria-pressed="true">Normal</button>
+      <button class="btn" data-speed="fast" aria-pressed="false">Fast</button>
+      <button class="btn" data-speed="instant" aria-pressed="false">Instant</button>
+    </div>
+    <div class="setting-row"><span class="lbl">Controls</span><span><kbd>Enter</kbd>/<kbd>Space</kbd> continue · <kbd>1</kbd>–<kbd>3</kbd> choose · <kbd>M</kbd> mute · <kbd>J</kbd> shelf &amp; journal · <kbd>Esc</kbd> close panel · mouse / tap works everywhere.</span></div>
+    <div class="setting-row"><span class="lbl">Progress</span><button id="setting-restart" class="btn">Restart the Night</button><button id="setting-title" class="btn">Back to Title</button></div>
+    <p class="muted">Your progress saves automatically on this device only (browser local storage). Nothing is sent anywhere. Clearing browser data erases the save and the ending gallery.</p>
+  </div>
+</div>
+
+<div id="modal-credits" class="modal" role="dialog" aria-modal="true" aria-labelledby="credits-title" aria-hidden="true">
+  <div class="modal-card">
+    <div class="modal-head"><h2 id="credits-title">Credits &amp; AI Disclosure</h2><button class="btn small modal-close" data-close="modal-credits">Close ×</button></div>
+    <ul class="credits-list">
+      <li><strong>Creative direction, concept &amp; story approval:</strong> Zul Zulfikar.</li>
+      <li><strong>Writing, design &amp; code:</strong> created with the assistance of Muse (Meta's AI assistant), working from the director's concept, chapter brief, characters, themes and ending structure. All story text was written for this game and reviewed as a complete work.</li>
+      <li><strong>Artwork:</strong> all nine illustrations are original AI-generated images made for this game (street stall, character portraits, memory vignettes). Every character is fictional; no real person's likeness is used. Prompts and provenance are recorded in the game's design notes.</li>
+      <li><strong>Music &amp; sound:</strong> 100% original, generated live in code with the Web Audio API — a soft pentatonic melody, rain from filtered noise, and small foley sounds. No recordings, no samples, no copyrighted music.</li>
+      <li><strong>AI tools used:</strong> Muse (writing, design and code assistance) and Muse's image generation pipeline (artwork). No other AI tools were used.</li>
+    </ul>
+    <p><strong>Originality:</strong> this is an original work. All characters, the stall, the street and the story are fictional and invented for this game. No third-party intellectual property, brands, franchises, logos or real likenesses appear. No personal data of any real person is used in the game.</p>
+    <p><strong>Built for:</strong> The Chroma Awards, Season 2 — Game division, Interactive Narrative category.</p>
+    <p class="muted">Thank you for spending the night at Senja. — One more spoon of sugar for the tired ones.</p>
+  </div>
+</div>
+
+<script src="story.js"></script>
+<script src="audio.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
